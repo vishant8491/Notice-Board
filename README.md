@@ -102,9 +102,3 @@ Make a few real commits as you build/tweak (not just one "initial commit") — e
 5. Once deployed, open the given `*.vercel.app` URL and confirm it opens without logging in and the notice board works end to end (create, edit, delete, refresh).
 
 If the database table doesn't exist yet on the hosted DB, run `npx prisma db push` once locally (pointed at the same `DATABASE_URL` you gave Vercel) before or after the first deploy — this creates the `Notice` table.
-
-
-
-## 6. Where and how AI was used
-
-AI (Claude) was used to help scaffold the project structure, write the Prisma schema, API routes, and React components, and to draft this README. All AI-generated code was reviewed, and the app was built and its build output checked before submission. The Urgent-first ordering logic, server-side validation rules, and overall requirements were driven directly by the assignment spec.
