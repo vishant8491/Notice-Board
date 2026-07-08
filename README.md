@@ -103,9 +103,7 @@ Make a few real commits as you build/tweak (not just one "initial commit") — e
 
 If the database table doesn't exist yet on the hosted DB, run `npx prisma db push` once locally (pointed at the same `DATABASE_URL` you gave Vercel) before or after the first deploy — this creates the `Notice` table.
 
-## 5. One thing I'd improve with more time
 
-Right now, notice images are stored as base64 strings directly in the database (`LongText` column). This is the simplest approach that works within a free-tier stack with no extra paid services, but it isn't ideal for larger images or a large volume of notices — it bloats the database and every page load pulls the full image data. With more time, I'd move image storage to a dedicated object store (e.g. Vercel Blob or Cloudflare R2, both of which have free tiers) and store only the resulting URL in the database.
 
 ## 6. Where and how AI was used
 
