@@ -1,0 +1,36 @@
+// Prisma schema for the Notice Board assignment.
+// Database: MySQL (tested against TiDB Cloud, a free hosted MySQL-compatible service).
+// If you use Neon / Supabase (Postgres) instead, change `provider` below to "postgresql" —
+// no other changes are needed, Prisma maps everything the same way.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Category {
+  Exam
+  Event
+  General
+}
+
+enum Priority {
+  Normal
+  Urgent
+}
+
+model Notice {
+  id          Int      @id @default(autoincrement())
+  title       String
+  body        String   @db.Text
+  category    Category @default(General)
+  priority    Priority @default(Normal)
+  publishDate DateTime
+  image       String?  @db.LongText // optional image, stored as a base64 data URL
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
