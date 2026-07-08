@@ -2,7 +2,7 @@
 
 A full CRUD notice board — built with **Next.js (Pages Router)**, **Prisma**, and a hosted MySQL database, deployed on **Vercel**.
 
-Live app: [_add your Vercel URL here after deploying_](https://notice-board-mauve.vercel.app/)
+Live app: [_This is live vercel link_](https://notice-board-mauve.vercel.app/)
 
 ## Features
 
